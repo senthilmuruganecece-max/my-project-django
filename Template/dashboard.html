@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measurement HMI</title>
+    <link rel="stylesheet" href="{% static 'css/sai.css' %}">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="box fkey">[F12]</div>
+    <div class="box" id="datetime"></div>
+    <div class="box">{{ request.user.username }}</div>
+    <div class="box">SHIFT-1</div>
+    <div class="box com">COM Disconnect</div>
+    <div class="box sql">SQL Connected</div>
+</div>
+
+<!-- INFO ROW -->
+<div class="info-row">
+    <div class="label">PART MODEL:</div>
+    <div class="value">DEMO</div>
+    <div class="label">PART NAME:</div>
+    <div class="value">DEMO-1</div>
+    <div class="label">STATUS:</div>
+    <div class="status green">0</div>
+    <div class="status yellow">0</div>
+    <div class="status red">0</div>
+    <div class="status blue">0</div>
+</div>
+
+<!-- MEASURE BAR -->
+<div class="measure-bar">
+    <div class="yellow-bar"></div>
+    <div class="do-measure">DO MEASUREMENT</div>
+    <div></div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- CHANNEL 1 -->
+    <div class="channel">
+        <div class="channel-title">CHANNEL-1</div>
+        <div class="limits">
+            <div class="limit">LSL<br><span class="val">14.990</span></div>
+            <div class="limit">NOM<br><span class="vall">15.000</span></div>
+            <div class="limit">USL<br><span class="val">15.010</span></div>
+        </div>
+        <div class="reading">14.6367</div>
+    </div>
+
+    <!-- CHANNEL 2 -->
+    <div class="channel">
+        <div class="channel-title">CHANNEL-2</div>
+        <div class="limits">
+            <div class="limit">LSL<br><span class="val">14.990</span></div>
+            <div class="limit">NOM<br><span class="vall">15.000</span></div>
+            <div class="limit">USL<br><span class="val">15.010</span></div>
+        </div>
+        <div class="reading">14.6367</div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+        <div class="table">
+            <div class="th"></div>
+            <div class="th">B1 LH MAX</div>
+            <div class="th">B1 LH MIN</div>
+
+            <div class="th">CUR</div>
+            <div class="td"></div>
+            <div class="td"></div>
+
+            <div class="th">MAX</div>
+            <div class="td gray"></div>
+            <div class="td gray"></div>
+
+            <div class="th">MIN</div>
+            <div class="td gray"></div>
+            <div class="td gray"></div>
+
+            <div class="th">TIR</div>
+            <div class="td gray"></div>
+            <div class="td gray"></div>
+        </div>
+
+        <div class="tapper">TAPPER</div>
+    </div>
+</div>
+
+<!-- INPUT -->
+<div class="input-row">
+    <div class="input-label">
+        ENTER THE PUNCH NO:
+        <input type="text">
+    </div>
+    <button class="enter-btn">Enter</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <button>MASTERING [F1]</button>
+    <button>MODEL [F2]</button>
+    <button>LIVE SPC [F3]</button>
+    <button>REPORT [F6]</button>
+    <a href="{% url 'logout' %}" style="margin-left:auto;color:white;">Logout</a>
+</div>
+
+<script src="{% static 'js/sai.js' %}"></script>
+</body>
+</html>

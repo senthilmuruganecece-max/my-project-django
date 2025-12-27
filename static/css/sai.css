@@ -1,0 +1,86 @@
+
+*{
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#2f2f2f;
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+    display:flex;
+    background:#7c7c7c;
+    padding:4px;
+    gap: 4px;
+    }
+.box{
+    border:2px solid #333;
+    background:#cfcfcf;
+    padding: 10px;
+    text-align:center;
+}
+.fkey{background:#0aa;color:#fff;}
+.com{background:#c9302c;color:#fff;}
+.sql{background:#3c763d;color:#b6ffb6;}
+
+
+
+
+/* ===== INFO ROW ===== */
+.info-row{
+    display:grid;
+    grid-template-columns:150px 1fr 150px 1fr 120px 40px 40px 40px 40px;
+    gap:4px;
+    background:#8a8a8a;
+    padding:4px;
+}
+.label,.status{border:2px solid #333;padding:6px;font-weight:bold;text-align:center;}
+.value{background:#2b2b2b;color:#aaa;border:2px solid #333;padding:6px;text-align:center;}
+.green{background:#008000;}
+.yellow{background:#d6c800;}
+.red{background:#c00000;}
+.blue{background:#0000aa;}
+
+
+
+
+/* ===== MEASURE BAR ===== */
+.measure-bar{display:grid;grid-template-columns:250px 1fr 200px;gap:4px;padding:4px;background:#8a8a8a;}
+.yellow-bar{background:#c4b000;border:2px solid #333;}
+.do-measure{background:#9c6b00;font-weight:bold;text-align:center;padding:8px;border:2px solid #333;}
+
+
+
+
+/* ===== MAIN ===== */
+.main{display:grid;grid-template-columns:1fr 1fr 320px;gap:6px;padding:6px;}
+.channel{background:#7f7f7f;border:2px solid #333;padding:6px;}
+.channel-title{background:#000;color:#aaa;font-size:32px;text-align:center;padding:12px;font-weight:bold;}
+.limits{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:6px;}
+.limit{background:#bdbdbd;border:2px solid #333;text-align:center;padding:4px;font-weight:bold;}
+.val{font-size:22px;color:#6a006a;}
+.vall{font-size: 22px;color: black;}
+.reading{margin-top:8px;background:#9c0000;font-size:72px;font-weight:bold;text-align:center;padding:18px;border:3px solid #333;}
+
+
+
+
+/* ===== RIGHT PANEL ===== */
+.right{background:#8a8a8a;border:2px solid #333;}
+.table{display:grid;grid-template-columns:60px 1fr 1fr;}
+.th{background:#bdbdbd;border:1px solid #333;padding:6px;font-weight:bold;text-align:center;}
+.td{background:#9c0000;border:1px solid #333;height:40px;}
+.gray{background:#9a9a9a;}
+.tapper{height:80px;background:#9a9a9a;border:2px solid #333;margin:6px;}
+
+/* ===== INPUT ROW ===== */
+.input-row{display:grid;grid-template-columns:1fr 200px;margin:6px;border:3px solid #333;}
+.input-label{background:#ffff00;font-size:28px;font-weight:bold;padding:20px;}
+.input-label input{font-size:26px;width:300px;}
+.enter-btn{background:#00ff00;font-size:32px;font-weight:bold;border-left:3px solid #333;text-align:center;padding:20px;cursor:pointer;}
+
+/* ===== FOOTER ===== */
+.footer{display:flex;gap:6px;padding:6px;background:#7a7a7a;}
+.footer button{flex:1;background:#9c3b00;color:#aaa;font-size:20px;font-weight:bold;border:3px solid #333;padding:10px;}
